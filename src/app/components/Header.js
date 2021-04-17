@@ -1,11 +1,13 @@
 import styled from "styled-components";
+import { IconButton } from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
 
 function Header() {
   return (
     <HeaderContainer>
-      {/* <LogoContainer>
-        <HeaderTitle>Portfolio</HeaderTitle>
-      </LogoContainer> */}
+      <BurgerContainer>
+        <MenuIcon />
+      </BurgerContainer>
       <NavContainer>
         <NavItem href="#home">Home</NavItem>
         <NavItem href="#about">About</NavItem>
@@ -25,30 +27,38 @@ const HeaderContainer = styled.header`
   top: 0;
   left: 0;
   display: flex;
+  flex-direction: column;
   height: 60px;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background: #fff;
   box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.4);
 `;
 
-const LogoContainer = styled.div`
-  display: flex;
-`;
+const BurgerContainer = styled(IconButton)`
+  display: none !important;
 
-const HeaderTitle = styled.h2`
-  background: linear-gradient(to right, #03001e, #7303c0, #ec38bc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-size: 1.7rem;
-  font-family: "Train One", cursive;
+  .MuiSvgIcon-root {
+    color: #000 !important;
+    font-size: 2rem;
+    font-weight: 600 !important;
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: flex !important;
+    align-self: flex-start !important;
+  }
 `;
 
 const NavContainer = styled.nav`
   display: flex;
-  width: 30%;
   justify-content: space-between;
+  width: 500px;
+  max-width: 100%;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const NavItem = styled.a`
