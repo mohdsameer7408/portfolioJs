@@ -34,15 +34,10 @@ const AboutContainer = styled.section`
   display: flex;
   justify-content: center;
   padding: 70px 20px;
-  background: linear-gradient(
-    to bottom,
-    rgba(20, 29, 38, 1),
-    rgba(20, 29, 38, 0.9),
-    rgba(20, 29, 38, 0.8)
-  );
+  background: #141d26;
   flex-wrap: wrap;
 `;
-//#141d26
+
 const AboutImageContainer = styled.div`
   margin: 0 133px 50px 0;
 `;
