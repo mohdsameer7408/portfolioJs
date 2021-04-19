@@ -13,7 +13,7 @@ function Home() {
     <HomeContainer id="home">
       <HeroDetails>
         <HeroTitle>Harshit , Vaishnavi and sameer </HeroTitle>
-        <HeroDescription>Harami</HeroDescription>
+        <HeroDescription>Code Art</HeroDescription>
       </HeroDetails>
       <SocialContainer>
         <IconButton>

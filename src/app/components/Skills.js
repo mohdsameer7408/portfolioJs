@@ -11,7 +11,6 @@ function Skills() {
   return (
     <SkillsContainer id="skills">
       <SkillsTitle>My Finest Skills</SkillsTitle>
-
       <SkillsInnerContainer>
         <SkillCard>
           <SkillHeading>ReactJs</SkillHeading>
