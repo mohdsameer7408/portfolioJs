@@ -12,8 +12,8 @@ function Home() {
   return (
     <HomeContainer id="home">
       <HeroDetails>
-        <HeroTitle>Harshit , Vaishnavi and sameer </HeroTitle>
-        <HeroDescription>Code Art</HeroDescription>
+        <HeroTitle>Harshit haramkhor </HeroTitle>
+        <HeroDescription>kaide no 101</HeroDescription>
       </HeroDetails>
       <SocialContainer>
         <IconButton>
@@ -59,6 +59,7 @@ const HomeContainer = styled.section`
   height: calc(100vh - 60px);
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
 `;
 
 const HeroDetails = styled.div`

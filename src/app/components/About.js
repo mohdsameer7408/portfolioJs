@@ -64,7 +64,7 @@ const AboutDescription = styled.p`
   line-height: 2rem;
 `;
 
-const StyledButton = styled(Button)`
+export const StyledButton = styled(Button)`
   background: #243447 !important;
   color: #fff !important;
   padding: 15px 20px !important;
