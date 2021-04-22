@@ -7,7 +7,7 @@ function About() {
   return (
     <AboutContainer id="about">
       <AboutImageContainer>
-        <AboutImage src="https://images.unsplash.com/photo-1599057933537-5cb12556a6f0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTd8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" />
+        <AboutImage src="https://scontent.flko7-1.fna.fbcdn.net/v/t1.6435-9/104482823_956499954794520_3596117502670329697_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=pfF5z2WFgYAAX8B1pHN&_nc_ht=scontent.flko7-1.fna&oh=9281d31e8a1f09fb8d267643a205dea2&oe=60A88B23" />
       </AboutImageContainer>
       <AboutContent>
         <AboutHeading>Know About Me !</AboutHeading>
@@ -46,6 +46,7 @@ const AboutImage = styled.img`
   width: 120px;
   height: 120px;
   border-radius: 50%;
+  object-fit: cover;
 `;
 
 const AboutContent = styled.div`

@@ -12,7 +12,7 @@ function Home() {
   return (
     <HomeContainer id="home">
       <HeroDetails>
-        <HeroTitle>Harshit haramkhor </HeroTitle>
+        <HeroTitle> haramkhor </HeroTitle>
         <HeroDescription>kaide no 101</HeroDescription>
       </HeroDetails>
       <SocialContainer>
