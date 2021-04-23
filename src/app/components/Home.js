@@ -6,7 +6,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import ArrowDropDownCircleRoundedIcon from "@material-ui/icons/ArrowDropDownCircleRounded";
 
-import hero from "../assets/images/hero1.jpg";
+import hero from "../assets/images/hero.jpg";
 
 function Home() {
   return (
