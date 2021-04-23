@@ -1,7 +1,8 @@
 import { useState } from "react";
 import styled, { css } from "styled-components";
-import { StyledButton } from "./About";
 import emailJs from "emailjs-com";
+
+import { StyledButton } from "./About";
 
 function Contact() {
   const [name, setName] = useState("");

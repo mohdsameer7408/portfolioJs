@@ -1,18 +1,35 @@
-import { useState } from "react";
-import styled from "styled-components";
+import { useEffect, useState } from "react";
+import styled, { css } from "styled-components";
 import { IconButton } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 
 function Header() {
   const [isNavOpened, setIsNavOpened] = useState(false);
+  const [isHeaderScrolled, setIsHeaderScrolled] = useState(false);
+
+  useEffect(() => {
+    const headerChangeHandler = () => {
+      if (window.scrollY > 600) {
+        setIsHeaderScrolled(true);
+      } else {
+        setIsHeaderScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", headerChangeHandler);
+
+    return () => {
+      window.removeEventListener("scroll", headerChangeHandler);
+    };
+  }, []);
 
   const navToggleHandler = () => {
     setIsNavOpened((prevState) => !prevState);
   };
 
   return (
-    <HeaderContainer>
+    <HeaderContainer isHeaderScrolled={isHeaderScrolled}>
       <BurgerContainer onClick={navToggleHandler}>
         <MenuIcon />
       </BurgerContainer>
@@ -45,23 +62,30 @@ export default Header;
 
 const HeaderContainer = styled.header`
   z-index: 99;
-  position: sticky;
+  position: absolute;
   top: 0;
   left: 0;
   display: flex;
   flex-direction: column;
+  width: 100%;
   height: 60px;
   justify-content: center;
   align-items: center;
-  background: #fff;
-  box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.4s all ease-in-out;
+  ${({ isHeaderScrolled }) =>
+    isHeaderScrolled &&
+    css`
+      position: fixed;
+      background: #000;
+      box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.4);
+    `}
 `;
 
 const BurgerContainer = styled(IconButton)`
   display: none !important;
 
   .MuiSvgIcon-root {
-    color: #000 !important;
+    color: #fff !important;
     font-size: 2rem;
     font-weight: 600 !important;
   }
@@ -96,7 +120,7 @@ const NavItem = styled.a`
   position: relative;
   display: flex;
   text-decoration: none;
-  color: #000;
+  color: #fff;
   font-size: 1rem;
   font-weight: 600;
   padding: 7px 14px;
@@ -113,6 +137,7 @@ const NavItem = styled.a`
     background: linear-gradient(
       to bottom right,
       rgba(148, 120, 177, 0.6),
+      rgba(102, 13, 97, 0.8),
       rgba(77, 30, 125, 0.6)
     );
     transition: 0.5s all ease;

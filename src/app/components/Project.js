@@ -2,74 +2,86 @@ import styled from "styled-components";
 
 import Iphone from "../assets/images/iphone.png";
 import Monitor from "../assets/images/monitor.png";
+import Amazon from "../assets/images/amazon.png";
+import WhatsApp from "../assets/images/whatsapp.png";
+import Instagram from "../assets/images/instagram.png";
+import BookCricket from "../assets/images/book-cricket.jpg";
+import ShopApp from "../assets/images/shop-app.jpg";
+import ChatOn from "../assets/images/chaton.jpg";
+import KeepNotes from "../assets/images/keep-notes.jpg";
+import MealsApp from "../assets/images/meals-app.jpg";
+
+const mobileApps = [
+  {
+    name: "Chat On",
+    uri: "https://github.com/mohdsameer7408/ChatOn",
+    image: ChatOn,
+  },
+  {
+    name: "Book Cricket",
+    uri: "https://github.com/mohdsameer7408/BookCricket",
+    image: BookCricket,
+  },
+  {
+    name: "Shop App",
+    uri: "https://github.com/mohdsameer7408/ShopApp",
+    image: ShopApp,
+  },
+  {
+    name: "Keep Notes",
+    uri: "https://github.com/mohdsameer7408/KeepNotes",
+    image: KeepNotes,
+  },
+  {
+    name: "Meals App",
+    uri: "https://github.com/mohdsameer7408/RecipeApp",
+    image: MealsApp,
+  },
+];
+
+const webApps = [
+  { name: "Amazon Clone", uri: "https://clone-18965.web.app/", image: Amazon },
+  {
+    name: "Instagram Clone",
+    uri: "https://instagram-clone-1911e.web.app/",
+    image: Instagram,
+  },
+  {
+    name: "WhatsApp Clone",
+    uri: "https://whatsapp-clone-acd10.web.app/",
+    image: WhatsApp,
+  },
+];
 
 function Project() {
   return (
     <ProjectContainer id="projects">
       <ProjectsTitle>My Projects</ProjectsTitle>
       <ProjectsInnerContainer>
-        <ProjectCardContainer>
-          <ProjectCard>
-            <ProjectImage src="https://media.discordapp.net/attachments/785856007817003008/833779385437388820/Screenshot_2021-04-20-00-30-20-882.jpg?width=325&height=683" />
-          </ProjectCard>
-          <ProjectTitle>BlueFrenchHorn</ProjectTitle>
-          <ProjectUrl
-            href="https://expo.io/@harsh_hitdubey/projects/blueFrenchHorn"
-            target="_blank"
-          >
-            Project Url
-          </ProjectUrl>
-        </ProjectCardContainer>
-
-        <ProjectCardContainer>
-          <ProjectCard>
-            <ProjectImage src="https://media.discordapp.net/attachments/785856007817003008/833779385437388820/Screenshot_2021-04-20-00-30-20-882.jpg?width=325&height=683" />
-          </ProjectCard>
-          <ProjectTitle>Recipe App</ProjectTitle>
-          <ProjectUrl href="" target="_blank">
-            Project Url{" "}
-          </ProjectUrl>
-        </ProjectCardContainer>
-
-        <ProjectCardContainer>
-          <ProjectCard>
-            <ProjectImage src="https://media.discordapp.net/attachments/785856007817003008/833779385437388820/Screenshot_2021-04-20-00-30-20-882.jpg?width=325&height=683" />
-          </ProjectCard>
-          <ProjectTitle>Book Cricket</ProjectTitle>
-          <ProjectUrl href="" target="_blank">
-            Project url
-          </ProjectUrl>
-        </ProjectCardContainer>
-
-        <ProjectCardContainer>
-          <ProjectCard>
-            <ProjectImage src="https://media.discordapp.net/attachments/785856007817003008/833779385437388820/Screenshot_2021-04-20-00-30-20-882.jpg?width=325&height=683" />
-          </ProjectCard>
-          <ProjectTitle>Shop-App</ProjectTitle>
-          <ProjectUrl href="" target="_blank">
-            Project url
-          </ProjectUrl>
-        </ProjectCardContainer>
+        {mobileApps.map(({ name, image, uri }) => (
+          <ProjectCardContainer key={name}>
+            <ProjectCard>
+              <ProjectImage src={image} />
+            </ProjectCard>
+            <ProjectTitle>{name}</ProjectTitle>
+            <ProjectUrl href={uri} target="_blank">
+              Project Url
+            </ProjectUrl>
+          </ProjectCardContainer>
+        ))}
       </ProjectsInnerContainer>
       <ProjectsInnerContainer>
-        <ProjectCardContainer>
-          <ProjectWebCard>
-            <ProjectWebImage src="https://media.discordapp.net/attachments/785856007817003008/834130346395566190/unknown.png?width=945&height=489" />
-          </ProjectWebCard>
-          <ProjectTitle>WhatsApp-Clone</ProjectTitle>
-          <ProjectUrl href="" target="_blank">
-            Project url
-          </ProjectUrl>
-        </ProjectCardContainer>
-        <ProjectCardContainer>
-          <ProjectWebCard>
-            <ProjectWebImage src="https://media.discordapp.net/attachments/785856007817003008/834130346395566190/unknown.png?width=945&height=489" />
-          </ProjectWebCard>
-          <ProjectTitle>WhatsApp-Clone</ProjectTitle>
-          <ProjectUrl href="" target="_blank">
-            Project url
-          </ProjectUrl>
-        </ProjectCardContainer>
+        {webApps.map(({ name, image, uri }) => (
+          <ProjectCardContainer key={uri}>
+            <ProjectWebCard>
+              <ProjectWebImage src={image} />
+            </ProjectWebCard>
+            <ProjectTitle>{name}</ProjectTitle>
+            <ProjectUrl href={uri} target="_blank">
+              Project url
+            </ProjectUrl>
+          </ProjectCardContainer>
+        ))}
       </ProjectsInnerContainer>
     </ProjectContainer>
   );
@@ -115,7 +127,7 @@ const ProjectImage = styled.img`
   width: 230px;
   padding: 10px;
   object-fit: cover;
-  border-radius: 25px;
+  border-radius: 27px;
 `;
 
 const ProjectTitle = styled.h2`

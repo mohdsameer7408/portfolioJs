@@ -6,28 +6,37 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import ArrowDropDownCircleRoundedIcon from "@material-ui/icons/ArrowDropDownCircleRounded";
 
-import hero from "../assets/images/hero.jpg";
+import hero from "../assets/images/hero1.jpg";
 
 function Home() {
   return (
     <HomeContainer id="home">
       <HeroDetails>
-        <HeroTitle> haramkhor </HeroTitle>
-        <HeroDescription>kaide no 101</HeroDescription>
+        <HeroTitle>Mohd Sameer Ahmad</HeroTitle>
+        <HeroDescription>Full Stack JS Developer</HeroDescription>
       </HeroDetails>
       <SocialContainer>
         <IconButton>
-          <IconContainer href="https://www.facebook.com/" target="_blank">
+          <IconContainer
+            href="https://www.facebook.com/mohdsameer.ahmad.142"
+            target="_blank"
+          >
             <FacebookIcon />
           </IconContainer>
         </IconButton>
         <IconButton>
-          <IconContainer href="https://www.linkedin.com" target="_blank">
+          <IconContainer
+            href="https://www.linkedin.com/in/mohd-sameer-ahmad"
+            target="_blank"
+          >
             <LinkedInIcon />
           </IconContainer>
         </IconButton>
         <IconButton>
-          <IconContainer href="https://www.instagram.com/" target="_blank">
+          <IconContainer
+            href="https://www.instagram.com/___s_a_m_ee_r___/"
+            target="_blank"
+          >
             <InstagramIcon />
           </IconContainer>
         </IconButton>
@@ -56,14 +65,14 @@ const HomeContainer = styled.section`
   background: rgba(0, 0, 0, 0.3) url(${hero}) center/cover fixed no-repeat;
   background-blend-mode: darken;
   width: 100%;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 0px);
   justify-content: center;
   align-items: center;
   padding: 0 20px;
 `;
 
 const HeroDetails = styled.div`
-  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(0, 0, 0, 0.4); */
   padding: 10px;
   border-radius: 20px;
   color: #fff;
@@ -104,7 +113,7 @@ const IconContainer = styled.a`
 
   :hover .MuiSvgIcon-root {
     transform: scale(1.2);
-    color: #800020;
+    color: #550d61;
   }
 `;
 
@@ -119,6 +128,6 @@ const ArrowDropdownCustom = styled(ArrowDropDownCircleRoundedIcon)`
   transition: 0.5s color ease-in-out !important;
 
   :hover {
-    color: #800020 !important;
+    color: #550d61 !important;
   }
 `;

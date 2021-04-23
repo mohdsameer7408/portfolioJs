@@ -7,41 +7,27 @@ const progressStatsColor = [
   "#b9bf15 #b9bf15 #b9bf15 #b9bf15",
 ];
 
+const mySkills = [
+  { name: "MERN", progress: 75 },
+  { name: "React Native", progress: 100 },
+  { name: "Java", progress: 50 },
+  { name: "Python", progress: 50 },
+  { name: "C", progress: 75 },
+];
+
 function Skills() {
   return (
     <SkillsContainer id="skills">
       <SkillsTitle>My Finest Skills</SkillsTitle>
       <SkillsInnerContainer>
-        <SkillCard>
-          <SkillHeading>ReactJs</SkillHeading>
-          <ProgressCircle progress={100}>
-            <ProgressPercentage>100%</ProgressPercentage>
-          </ProgressCircle>
-        </SkillCard>
-        <SkillCard>
-          <SkillHeading>React Native</SkillHeading>
-          <ProgressCircle progress={75}>
-            <ProgressPercentage>75%</ProgressPercentage>
-          </ProgressCircle>
-        </SkillCard>
-        <SkillCard>
-          <SkillHeading>Java</SkillHeading>
-          <ProgressCircle progress={75}>
-            <ProgressPercentage>75%</ProgressPercentage>
-          </ProgressCircle>
-        </SkillCard>
-        <SkillCard>
-          <SkillHeading>Python</SkillHeading>
-          <ProgressCircle progress={50}>
-            <ProgressPercentage>50%</ProgressPercentage>
-          </ProgressCircle>
-        </SkillCard>
-        <SkillCard>
-          <SkillHeading>NodeJs</SkillHeading>
-          <ProgressCircle progress={75}>
-            <ProgressPercentage>75%</ProgressPercentage>
-          </ProgressCircle>
-        </SkillCard>
+        {mySkills.map(({ name, progress }) => (
+          <SkillCard key={name}>
+            <SkillHeading>{name}</SkillHeading>
+            <ProgressCircle progress={progress}>
+              <ProgressPercentage>{progress}%</ProgressPercentage>
+            </ProgressCircle>
+          </SkillCard>
+        ))}
       </SkillsInnerContainer>
     </SkillsContainer>
   );

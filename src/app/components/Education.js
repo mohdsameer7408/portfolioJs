@@ -12,9 +12,9 @@ function Education() {
             Shri Ramswaroop Memorial University
           </EducationHeading>
           <EducationDescription>
-            B.Tech in Computer Science
+            B.Tech in Computer Science & Engineering
             <br />
-            9.99 CGPA
+            7.80 CGPA
           </EducationDescription>
         </EducationWrapper>
       </EducationBox>
@@ -43,6 +43,7 @@ const EducationContainer = styled.section`
   display: flex;
   flex-direction: column;
   padding: 70px;
+  line-height: 2;
 
   @media only screen and (max-width: 768px) {
     padding: 70px 30px;

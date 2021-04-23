@@ -1,6 +1,5 @@
 import { Button } from "@material-ui/core";
 import GetAppIcon from "@material-ui/icons/GetApp";
-
 import styled from "styled-components";
 
 function About() {
@@ -13,15 +12,26 @@ function About() {
         <AboutHeading>Know About Me !</AboutHeading>
         <AboutDescription>
           I'm a computer science student who is passionate about writing code,
-          solving problems, automating stuff, and building software.
+          solving problems, automating stuff, and building software. 💻
+          JavaScript (Vanilla, React.Js, Redux, Node.Js, Express.Js), React
+          Native, C (Data Structures), Python (Django, Django Rest Framework)
+          Geek. 🌐 Having good command over HTML5, CSS3, JS. 🔭 I’m currently
+          working on a crossplatform app for managing club events in my college.
+          🌱 I’m currently learning MERN, React Native. 😎 Managing code with
+          Git Version Control. 🤔 I’m looking for help with DevOps. 💬 Ask me
+          about MERN stack and react native. 👯 I’m looking for a JS fullstack
+          internship. 😄 Pronouns: He/His. ⚡ Fun fact: coding is a genie.
         </AboutDescription>
         <AboutHeading>Contact</AboutHeading>
         <AboutDescription>
-          ⚙ 9721152944 <br /> ⚙ 271 A/2 Tilak Nagar <br /> ⚙ Allahpur Prayagraj
-          <br />⚙ Near Tilak Sikshad Santhan
+          ⚙ mohdsameer7408@gmail.com <br /> ⚙ Gorakhpur, UP
+          <br />⚙ India
         </AboutDescription>
-        <StyledButton href="https://drive.google.com/file/d/1jzmeGPB2JJO48zI9cTyvLom7v2gKCjbJ/view?usp=sharing">
-          <GetAppIcon /> Download Resume
+        <StyledButton
+          href="https://drive.google.com/file/d/1jzmeGPB2JJO48zI9cTyvLom7v2gKCjbJ/view?usp=sharing"
+          startIcon={<GetAppIcon />}
+        >
+          Download Resume
         </StyledButton>
       </AboutContent>
     </AboutContainer>
