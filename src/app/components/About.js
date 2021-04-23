@@ -2,11 +2,13 @@ import { Button } from "@material-ui/core";
 import GetAppIcon from "@material-ui/icons/GetApp";
 import styled from "styled-components";
 
+import Profile from "../assets/images/profile.jpg";
+
 function About() {
   return (
     <AboutContainer id="about">
       <AboutImageContainer>
-        <AboutImage src="https://scontent.flko7-1.fna.fbcdn.net/v/t1.6435-9/104482823_956499954794520_3596117502670329697_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=pfF5z2WFgYAAX8B1pHN&_nc_ht=scontent.flko7-1.fna&oh=9281d31e8a1f09fb8d267643a205dea2&oe=60A88B23" />
+        <AboutImage src={Profile} />
       </AboutImageContainer>
       <AboutContent>
         <AboutHeading>Know About Me !</AboutHeading>
