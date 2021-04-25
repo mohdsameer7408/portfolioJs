@@ -68,7 +68,7 @@ function Contact() {
           onClick={formSubmitHandler}
           disabled={isButtonActive}
         >
-          Get in Touch
+          {isButtonActive ? "Sending..." : "Get in Touch"}
         </StyledButton>
       </FormContainer>
     </ContactContainer>
