@@ -61,7 +61,7 @@ function Project() {
         {mobileApps.map(({ name, image, uri }) => (
           <ProjectCardContainer key={name}>
             <ProjectCard>
-              <ProjectImage src={image} />
+              <ProjectImage loading="lazy" src={image} alt={name} />
             </ProjectCard>
             <ProjectTitle>{name}</ProjectTitle>
             <ProjectUrl href={uri} target="_blank">
@@ -74,7 +74,7 @@ function Project() {
         {webApps.map(({ name, image, uri }) => (
           <ProjectCardContainer key={uri}>
             <ProjectWebCard>
-              <ProjectWebImage src={image} />
+              <ProjectWebImage loading="lazy" src={image} alt={name} />
             </ProjectWebCard>
             <ProjectTitle>{name}</ProjectTitle>
             <ProjectUrl href={uri} target="_blank">
