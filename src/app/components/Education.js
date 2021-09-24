@@ -14,7 +14,7 @@ function Education() {
           <EducationDescription>
             B.Tech in Computer Science & Engineering
             <br />
-            7.80 CGPA
+            7.95 CGPA
           </EducationDescription>
         </EducationWrapper>
       </EducationBox>
