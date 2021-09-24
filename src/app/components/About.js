@@ -3,6 +3,7 @@ import GetAppIcon from "@material-ui/icons/GetApp";
 import styled from "styled-components";
 
 import Profile from "../assets/images/profile.jpg";
+import Resume from "../assets/docs/Sameer_Ahmad_Resume.pdf";
 
 function About() {
   return (
@@ -13,28 +14,20 @@ function About() {
       <AboutContent>
         <AboutHeading>Know About Me !</AboutHeading>
         <AboutDescription>
-          I'm a computer science student who is passionate about writing code,
-          solving problems, automating stuff, and building software. 💻
-          JavaScript (Vanilla, React.Js, Redux, Node.Js, Express.Js), React
-          Native, C (Data Structures), Python (Django, Django Rest Framework)
-          Geek. 🌐 Having good command over HTML5, CSS3, JS. 🔭 I’m currently
-          working on a crossplatform app for managing club events in my college.
-          🌱 I’m currently learning MERN, React Native. 😎 Managing code with
-          Git Version Control. 🤔 I’m looking for help with DevOps. 💬 Ask me
-          about MERN stack and react native. 👯 I’m looking for a JS fullstack
-          internship. 😄 Pronouns: He/His. ⚡ Fun fact: coding is a genie.
+          A computer science enthusiast with college project experience in full
+          stack, mobile development, looking to utilize my knowledge and skills
+          for the organization’s growth.
         </AboutDescription>
         <AboutHeading>Contact</AboutHeading>
         <AboutDescription>
           ⚙ mohdsameer7408@gmail.com <br /> ⚙ Gorakhpur, UP
           <br />⚙ India
         </AboutDescription>
-        <StyledButton
-          href="https://drive.google.com/file/d/1jzmeGPB2JJO48zI9cTyvLom7v2gKCjbJ/view?usp=sharing"
-          startIcon={<GetAppIcon />}
-        >
-          Download Resume
-        </StyledButton>
+        <ResumeLink href={Resume} download="MohdSameerAhmadResume">
+          <StyledButton startIcon={<GetAppIcon />}>
+            Download Resume
+          </StyledButton>
+        </ResumeLink>
       </AboutContent>
     </AboutContainer>
   );
@@ -87,4 +80,8 @@ export const StyledButton = styled(Button)`
   :hover {
     box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.2) !important;
   }
+`;
+
+const ResumeLink = styled.a`
+  text-decoration: none;
 `;
